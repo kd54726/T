@@ -573,60 +573,114 @@ section {
     line-height: 1.7;
 }
 
-/* ===== PROMISES ===== */
-.promises-section {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
+ /* ===== PROMISES ===== */
+        .promises-section {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-.promise-carousel {
-    position: relative;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        .promise-carousel {
+            position: relative;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.promise-card {
-    position: absolute;
-    font-family: 'Dancing Script', cursive;
-    font-size: clamp(22px, 4vw, 32px);
-    color: rgba(255, 255, 255, 0.85);
-    line-height: 1.6;
-    padding: 30px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s;
-    max-width: 700px;
-}
+        .promise-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 107, 138, 0.25);
+            background: rgba(255, 255, 255, 0.03);
+            color: #ff8ba7;
+            font-size: 22px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            z-index: 5;
+            backdrop-filter: blur(5px);
+            user-select: none;
+        }
 
-.promise-card.active {
-    opacity: 1;
-    transform: translateY(0);
-}
+        .promise-arrow:hover {
+            background: rgba(255, 71, 120, 0.15);
+            border-color: rgba(255, 107, 138, 0.5);
+            box-shadow: 0 0 20px rgba(255, 71, 120, 0.2);
+            transform: translateY(-50%) scale(1.1);
+        }
 
-.promise-dots {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
+        .promise-arrow:active {
+            transform: translateY(-50%) scale(0.95);
+        }
 
-.promise-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: rgba(255, 107, 138, 0.2);
-    cursor: pointer;
-    transition: all 0.3s;
-}
+        .promise-arrow.prev {
+            left: -10px;
+        }
 
-.promise-dot.active {
-    background: #ff4778;
-    box-shadow: 0 0 15px rgba(255, 71, 120, 0.5);
-    transform: scale(1.2);
-}
+        .promise-arrow.next {
+            right: -10px;
+        }
+
+        @media (max-width: 600px) {
+            .promise-arrow {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+            .promise-arrow.prev {
+                left: 0;
+            }
+            .promise-arrow.next {
+                right: 0;
+            }
+        }
+
+        .promise-card {
+            position: absolute;
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(22px, 4vw, 32px);
+            color: rgba(255,255,255,0.85);
+            line-height: 1.6;
+            padding: 30px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s;
+            max-width: 700px;
+        }
+
+        .promise-card.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .promise-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .promise-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 107, 138, 0.2);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .promise-dot.active {
+            background: #ff4778;
+            box-shadow: 0 0 15px rgba(255, 71, 120, 0.5);
+            transform: scale(1.2);
+        }
 
 /* ===== INTERACTIVE HEART CLICK ===== */
 .click-section {
