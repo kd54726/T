@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You, My Love ❤️</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Stars Background -->
+    <canvas id="stars-canvas"></canvas>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-heart fade-in">❤️</div>
+        <h1 class="fade-in fade-in-delay-1">You Mean The World To Me</h1>
+        <p class="fade-in fade-in-delay-2">Every moment with you is a treasure I hold close to my heart. This little
+            corner of the internet is dedicated to you - the goddess that has blessed my life forever.</p>
+        <div class="scroll-indicator fade-in fade-in-delay-3"
+            onclick="document.getElementById('counter').scrollIntoView({behavior:'smooth'})">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Love Counter -->
+    <section class="counter-section" id="counter">
+        <h2 class="section-title">Every Second With You Counts</h2>
+        <div class="counter-grid">
+            <div class="counter-box">
+                <div class="counter-number" id="days">0</div>
+                <div class="counter-label">Days</div>
+            </div>
+            <div class="counter-box">
+                <div class="counter-number" id="hours">0</div>
+                <div class="counter-label">Hours</div>
+            </div>
+            <div class="counter-box">
+                <div class="counter-number" id="minutes">0</div>
+                <div class="counter-label">Minutes</div>
+            </div>
+            <div class="counter-box">
+                <div class="counter-number" id="seconds">0</div>
+                <div class="counter-label">Seconds</div>
+            </div>
+        </div>
+        <p style="color: rgba(255,255,255,0.4); margin-top: 25px; font-size: 14px;">...of loving you ✨</p>
+    </section>
+
+    <!-- Reasons I Love You -->
+    <section class="reasons-section" id="reasons">
+        <h2 class="section-title">Reasons I Love You</h2>
+        <div class="reasons-grid">
+            <div class="reason-card">
+                <div class="reason-icon">😊</div>
+                <h3>Your Smile</h3>
+                <p>Your smile make brightens my day. Seeing you smile make me smile.</p>
+            </div>
+            <div class="reason-card">
+                <div class="reason-icon">💖</div>
+                <h3>Your Goddess Energy</h3>
+                <p>Being around you give me goddess energy. You're the most confident woman I've ever seen.
+                </p>
+            </div>
+            <div class="reason-card">
+                <div class="reason-icon">😂</div>
+                <h3>Your Laugh</h3>
+                <p>That beautiful laugh of yours is my favorite sound in the entire universe. It's pure magic.</p>
+            </div>
+            <div class="reason-card">
+                <div class="reason-icon">💪</div>
+                <h3>Your Strength</h3>
+                <p>You inspire me every day. You motivate me to get better and be more successful for us. You're the
+                    strongest person I know.
+                </p>
+            </div>
+            <div class="reason-card">
+                <div class="reason-icon">🤗</div>
+                <h3>Your Hugs</h3>
+                <p>In your arms, I've found my peace. Every hug from you makes the whole world silent.</p>
+            </div>
+            <div class="reason-card">
+                <div class="reason-icon">✨</div>
+                <h3>Your Soul</h3>
+                <p>Everything about you is just perfect. It's just a vibe fr fr.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Letter -->
+    <section class="letter-section" id="letter">
+        <div>
+            <h2 class="section-title">A Letter For You</h2>
+            <div class="letter-wrapper">
+                <div class="letter-envelope" id="envelope" onclick="openEnvelope()">
+                    <!-- Back wall -->
+                    <div class="envelope-back"></div>
+                    <!-- Letter (between back and front) -->
+                    <div class="letter-paper" id="paper">
+                        <h3>My Supreme leader,</h3>
+                        <p>
+                            I was lost before meeting you. I gave up on everything, I was just existing back then.
+                            <br><br>
+                            But then you came into my life and turned my world upside down. In a good way.
+                            You turned all the ordinary moments into extraordinary memories. With
+                            you.
+                            <br><br>
+                            I know recently I have not been able to give you as much attention as I should.
+                            I have made mistakes but I'm learning and I promise to be better for you.
+                            <br><br>
+                            Thank you for being my best friend, my greatest adventure, and my forever home. I love you
+                            more than yesterday, less than tomorrow, and with everything I am.
+                            <br><br>
+                            I'm not good at expressing my feelings, but I want you to know that I love you more than
+                            words can say.
+                            Forever & Always Yours ❤️
+                        </p>
+                    </div>
+                    <!-- Front pocket (hides the letter) -->
+                    <div class="envelope-front"></div>
+                    <!-- Flap on top -->
+                    <div class="envelope-flap" id="flap"></div>
+                </div>
+            </div>
+            <p class="letter-hint" id="letterHint">✉️ Click the envelope to open</p>
+        </div>
+    </section>
+
+    <!-- Our Story Timeline -->
+    <section class="timeline-section" id="story">
+        <h2 class="section-title">Our Story</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">The Beginning</div>
+                    <h3>When We First Met</h3>
+                    <p>The stars aligned and brought us together. From that very first moment.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">The Spark</div>
+                    <h3>Our First Conversation</h3>
+                    <p>Hours felt like minutes. We talked for hours throughout the night.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">The Moment</div>
+                    <h3>When I Fell For You</h3>
+                    <p>It wasn't one big moment, it was the little ones. The way you laughed, the way you cared,
+                        the way you looked at me, the way you reassured me.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Right Now</div>
+                    <h3>Loving You More Each Day</h3>
+                    <p>Every new day with you is the best day of my life. You're my present and my future. My heart is
+                        yours, forever.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promises Carousel -->
+    <section class="promises-section" id="promises">
+        <h2 class="section-title">My Promises To You</h2>
+        <div class="promise-carousel">
+            <div class="promise-card active">"I promise to always make you laugh, even with my lame jokes. 💕"</div>
+            <div class="promise-card">"I promise to hold your hand through every storm and dance with you in every rain.
+                🌧️"</div>
+            <div class="promise-card">"I promise to never stop trying to be the person you deserve. ✨"</div>
+            <div class="promise-card">"I promise to love you a little more every day, even when it seems impossible. 💖"
+            </div>
+            <div class="promise-card">"I promise to be your safe place, your biggest fan, and your forever home. 🏠"
+            </div>
+        </div>
+        <div class="promise-dots" id="promiseDots"></div>
+    </section>
+
+    <!-- Interactive Heart Click -->
+    <section class="click-section">
+        <h2 class="section-title">Send Me Your Love</h2>
+        <div class="big-heart-btn" id="bigHeart" onclick="clickHeart(event)">💗</div>
+        <div class="click-count">You've sent <span id="heartCount">0</span> hearts</div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>I Love You, Today, Tomorrow & Forever ❤️</p>
+        <p> I love you Tanuja</p>
+        <p class="small">Made with all my heart, just for you.</p>
+    </footer>
+
+    <!-- Mini hearts container -->
+    <div class="mini-hearts" id="miniHearts"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
